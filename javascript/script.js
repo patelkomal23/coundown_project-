@@ -37,27 +37,23 @@ setInterval(() => {
     currSlide(1);
 }, 2000);
 
+let quote = document.getElementById('quote-text');
+let footer = document.getElementById('quote-author');
 
-
-let quote = document.querySelector('.blockquote p');
-let footer = document.querySelector('.blockquote-footer');
-
-const sportsQuotes = [
-    "Hard work beats talent when talent doesn’t work hard. – Tim Notke",
-    "You miss 100% of the shots you don’t take. – Wayne Gretzky",
-    "It’s not whether you get knocked down, it’s whether you get up. – Vince Lombardi",
-    "Champions keep playing until they get it right. – Billie Jean King",
-    "The only way to prove you are a good sport is to lose. – Ernie Banks",
-    
+const quotes = [
+    { text: "Hard work beats talent when talent doesn’t work hard.", author: "Tim Notke" },
+    { text: "You miss 100% of the shots you don’t take.", author: "Wayne Gretzky" },
+    { text: "It’s not whether you get knocked down, it’s whether you get up.", author: "Vince Lombardi" },
+    { text: "Champions keep playing until they get it right.", author: "Billie Jean King" },
+    { text: "The only way to prove you are a good sport is to lose.", author: "Ernie Banks" },
+    { text: "Do not let what you cannot do interfere with what you can do.", author: "John Wooden" },
+    { text: "Never say never because limits, like fears, are often just an illusion.", author: "Michael Jordan" }
 ];
 
-console.log(sportsQuotes);
-
-let  changeQuote=()=>{
+let changeQuote = () => {
     let index = Math.floor(Math.random() * quotes.length);
-    quote.textContent = quotes[index].quote;
-    footer.textContent = quotes[index].author;    
-}
+    quote.textContent = quotes[index].text;
+    footer.innerHTML = quotes[index].author};
 changeQuote();
 setInterval(() => {
     changeQuote();
