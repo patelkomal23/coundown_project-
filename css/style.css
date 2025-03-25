@@ -2,10 +2,6 @@
     margin: 0;
     padding: 0;
 }
-body{
-
-}
-.carousel-control-prev,
-.carousel-control-next {
-  color: black !important;
+body{ 
+    background-color: rgb(215, 241, 241) !important;
 }

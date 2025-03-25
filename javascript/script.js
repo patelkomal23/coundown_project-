@@ -58,4 +58,20 @@ changeQuote();
 setInterval(() => {
     changeQuote();
 
-}, 1000);
+}, 2000);
+let timer = document.getElementById('timerr').textContent;
+
+let id;
+
+const starttimer = () => {
+    id = setInterval(() => {
+        if (timer == 0) {
+            alert("timer out!")
+            clearInterval(id);
+            return;
+        }
+        timer--;
+        document.getElementById('timerr').textContent = time > 9 ? time : '0' + time;
+                      
+    }, 1000)
+}
