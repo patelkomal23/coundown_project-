@@ -63,4 +63,4 @@ sportQuote();
 setInterval(() => {
     sportQuote();
 
-}, 1000);
+}, 2000);
