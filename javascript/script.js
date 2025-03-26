@@ -10,6 +10,7 @@ let Timer = () => {
 setInterval(Timer, 1000);
 
 
+//image slider
 
 let slideIndex = 0;
 let slides = document.querySelectorAll(".carousel-item");
@@ -36,6 +37,10 @@ displaySlide(slideIndex);
 setInterval(() => {
     currSlide(1);
 }, 2000);
+
+
+
+// sportQuote
 
 let quote = document.getElementById('quote-text');
 let footer = document.getElementById('quote-author');
