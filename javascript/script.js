@@ -3,7 +3,7 @@ let Timer = () => {
     let hours = Math.floor(time / 3600);
     let minutes = Math.floor((time % 3600) / 60);
     let seconds = time % 60;
-    document.getElementById('timer').innerText = `Event Starts In: ${hours}h ${minutes}m ${seconds}s`;
+    document.getElementById('timer').innerText = ` ${hours}h ${minutes}m ${seconds}s`;
     if (time > 0)
         time--;
 }
@@ -50,28 +50,12 @@ const quotes = [
     { text: "Never say never because limits, like fears, are often just an illusion.", author: "Michael Jordan" }
 ];
 
-let changeQuote = () => {
+let sportQuote = () => {
     let index = Math.floor(Math.random() * quotes.length);
     quote.textContent = quotes[index].text;
     footer.innerHTML = quotes[index].author};
-changeQuote();
+sportQuote();
 setInterval(() => {
-    changeQuote();
+    sportQuote();
 
-}, 2000);
-let timer = document.getElementById('timerr').textContent;
-
-let id;
-
-const starttimer = () => {
-    id = setInterval(() => {
-        if (timer == 0) {
-            alert("timer out!")
-            clearInterval(id);
-            return;
-        }
-        timer--;
-        document.getElementById('timerr').textContent = time > 9 ? time : '0' + time;
-                      
-    }, 1000)
-}
+}, 1000);
